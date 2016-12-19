@@ -1,0 +1,695 @@
+@import 'nib'
+@import url('https://fonts.googleapis.com/css?family=Cormorant:700&subset=cyrillic');
+
+@font-face {
+	font-family: "HirmosCapsUcs";
+	src: url("../fonts/Hirmos_Caps_Ucs.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+*
+	box-sizing border-box
+.clearfix
+	clearfix()
+h1,h2,h3,h4,h5,h6
+	font-family: "HirmosCapsUcs"
+	font-size 36px
+	margin 0
+a
+	text-decoration none
+img
+	max-width 100%
+body
+	font-size 18px
+	max-width 1920px
+	min-width 1000px
+	margin 0 auto
+	color #21190d
+	overflow-x hidden
+	background url("../images/ui/bg.png") repeat-y
+	font-family "Cormorant", serif
+.cb-btn
+	width 213px
+	height 53px
+	position absolute
+	top 13%
+	left -20%
+	background url("../images/ui/callback_bg.png") no-repeat
+	transform rotate(-90deg)
+	cursor pointer
+	text-align center
+	div
+		display block
+		font-size 18px
+		padding-top 7px
+		font-family: "HirmosCapsUcs"
+		// transform rotate(-90deg)
+		color #fff
+		span
+			font-size 14px
+			display block
+.wrap
+	width 1000px
+	margin 0 auto
+	position relative
+	&:before
+		display block
+		content: ''
+		width 66px
+		height 100%
+		background url("../images/ui/body_border.png") repeat-y
+		position absolute
+		top -45px
+		left -66px
+	&:after
+		display block
+		content: ''
+		width 66px
+		height 100%
+		background url("../images/ui/body_border.png") repeat-y
+		transform: rotate(180deg)
+		position absolute
+		top -45px
+		right -66px
+header
+	min-height 250px
+	background url("../images/ui/header-bg.png") no-repeat center top
+	padding 0 24px
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content: space-between
+	.logo-container
+		background url("../images/ui/logo-bg.png") no-repeat
+		width 274px
+		height 223px
+		text-align center
+		.logo
+			margin-bottom 13px
+			&+div
+				font-size 14px
+				color #fff
+				font-family "HirmosCapsUcs"
+				padding 0 40px
+				letter-spacing 0.2px
+	.top-data
+		width 274px
+		height 221px
+		background url("../images/ui/header-data-bg.png") no-repeat
+		font-size 22px
+		color #fff
+		a
+			color #fff
+			text-decoration none
+			display block
+			&:hover
+				text-decoration underline
+		&>div
+			padding-left 110px
+			position relative
+			&.worktime
+				margin-bottom 12px
+				&:before
+					display block
+					content: ''
+					width 36px
+					height 47px
+					position absolute
+					top -4px
+					left 40px
+					background url("../images/ui/top-data-icons.png") no-repeat 0px 0px
+			&.mail
+				margin-bottom 18px				
+				&:before
+					display block
+					content: ''
+					width 56px
+					height 37px
+					position absolute
+					top -4px
+					left 29px
+					background url("../images/ui/top-data-icons.png") no-repeat 0px -46px
+			&.phone
+				padding-left 105px
+				a
+					letter-spacing 1.1px
+					margin-bottom 2px
+				&:before
+					display block
+					content: ''
+					width 69px
+					height 48px
+					position absolute
+					top 5px
+					left 33px
+					background url("../images/ui/top-data-icons.png") no-repeat 0px -83px
+.main-slider
+	padding 10px 0 45px 0
+	position relative
+	background url("../images/ui/slider-bg.png") no-repeat center bottom
+	.dots
+		position absolute
+		z-index 10
+		bottom 50px
+		width 100%
+		text-align center
+		.dot
+			display inline-block
+			width 14px
+			height 14px
+			cursor pointer
+			border-radius 50%
+			border 1px solid #fff
+			&:not(:last-child)
+				margin-right 6px
+			&.active
+				background #af601e
+				border-color #af601e
+	.slides
+		position relative
+		&:after
+			display block
+			content url("../images/ui/slider-border.png")
+			position absolute
+			top -40px
+			left 0
+		&:before
+			display block
+			content url("../images/ui/slider-shadow.png")
+			position absolute
+			bottom -60px
+			left 50%
+			transform translateX(-50%)
+		.slide-item
+			width 100%
+			height 424px
+			mask url("../images/ui/slider-form.png")
+			-webkit-mask-box-image url("../images/ui/slider-form.png")
+			img
+				display block
+				border 5px solid transparent
+				
+nav
+	ul
+		padding 0 15px
+		margin 0
+		list-style-type none
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		height 65px
+		line-height 65px
+		background #b0601e
+		li
+			a
+				font-size 18px
+				color #fff
+				font-family: "HirmosCapsUcs"
+				transition 0.3s
+				text-decoration none
+				&:hover
+					text-decoration underline
+main
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	position relative
+	z-index 1
+	flex-wrap wrap
+	padding 30px 0 0 0
+	background url("../images/ui/boards-bg.png") no-repeat, url("../images/ui/boards2.png") no-repeat center 60%
+	aside
+		width 20.8%
+		padding-left 10px
+		.collection
+			width 180px
+			height 300px
+			background url("../images/ui/sidebar-bg-1.png") no-repeat
+			margin-bottom 25px
+			padding-top 10px
+			text-align center
+			position relative
+			.img-form
+				width 154px
+				height 185px
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				justify-content center
+				overflow hidden 
+				margin 0 14.5px 0 auto
+				mask url("../images/ui/sidebar-form.png")
+				-webkit-mask-box-image url("../images/ui/sidebar-form.png")
+				img
+					max-width inherit
+				
+			&:after
+				display block
+				content url("../images/ui/sidebar_line.png")
+				position absolute
+				bottom 70px
+				left 50%
+				transform translateX(calc(-50% - 4px))
+			a				
+				font-size 17px
+				color #fff
+				padding 0 3px
+				display block
+				margin-top 35px
+				text-transform uppercase
+				&:hover
+					text-decoration underline
+		.sidebar-menu
+			width 170px
+			background url("../images/ui/sidebar-bg-2.png") no-repeat center
+			min-height 380px
+			position relative
+			padding 45px 0
+			&:after
+				display block
+				content url("../images/ui/sidebar_line.png")
+				position absolute
+				bottom 20px
+				left 50%
+				transform translateX(calc(-50% - 4px))
+			&:before
+				display block
+				content url("../images/ui/sidebar_line.png")
+				position absolute
+				top 20px
+				left 50%
+				margin-left -44px
+				transform rotate(180deg)
+			ul
+				padding 0
+				margin 0
+				list-style-type none
+				text-align center
+				li
+					padding 0 20px
+					&:not(:last-child)
+						margin-bottom 10px
+					a
+						color #fff
+						font-size 16px
+						text-transform uppercase
+						transition 0.3s
+						&:hover
+							color #000
+	article
+		width 79.2%
+		padding-right 20px
+		margin-bottom 40px
+		&>section
+			background #F9DEC7
+section.catalog,
+section.category-catalog
+	position relative
+	border-left 1px solid #d2c3af
+	border-right 1px solid #d2c3af
+	margin-top 75px
+	&:before
+		display block
+		content: ''
+		width 100%
+		height 74px
+		background url("../images/ui/catalog-border.png") no-repeat
+		position absolute
+		top -74px
+		left 0
+	&:after
+		display block
+		content: ''
+		width 100%
+		height 74px
+		background url("../images/ui/catalog-border.png") no-repeat
+		position absolute
+		bottom -45px
+		left 0
+		transform rotate(180deg)
+	h1
+		color #3a2518
+		padding-left 40px
+		position relative
+		top -40px
+	.catalog-wrap
+		padding 0 15px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content: space-between
+		flex-wrap wrap
+		position relative
+		z-index 1
+		.item
+			margin-bottom 10px	
+			a
+				&:hover
+					span
+						text-decoration underline						
+				.photo-container
+					overflow hidden
+					width 184px
+					position relative
+					height 218px
+					background url("../images/ui/item-bg.png") no-repeat					
+					.img
+						width 154px
+						height 185px
+						display -webkit-flex
+						display -moz-flex
+						display -ms-flex
+						display -o-flex
+						display flex
+						justify-content center
+						margin 12px 18px 0 auto
+						mask url("../images/ui/sidebar-form.png")
+						-webkit-mask-box-image url("../images/ui/sidebar-form.png")
+						img
+							display block
+							max-width inherit
+							margin 0 auto
+				span
+					font-size 17px
+					color #3a2518
+					display block
+					text-align center
+					position relative
+					text-transform uppercase
+					&:before
+						display block
+						content url("../images/ui/item_seperator.png")
+						margin 10px auto 0 auto
+section.category-catalog
+	padding-bottom 70px
+	&:after
+		display none
+section.about
+	margin-top 119px
+	position relative
+	padding 0 30px 30px 30px
+	&:before
+		display block
+		content: ''
+		width 100%
+		height 74px
+		background url("../images/ui/catalog-border.png") no-repeat
+		position absolute
+		top -74px
+		left 0
+	&:after
+		display block
+		content url("../images/ui/seperator.png")
+		position absolute
+		top -105px
+		left 50%
+		transform translateX(-50%)
+section.callback,
+section.about-category
+	padding 0 30px 30px 30px
+	border-radius 0px 0px 60px 60px
+	background url("../images/ui/form-bg.png") no-repeat center bottom, #F9DEC7
+	.form
+		width 715px
+		height 306px
+		margin 20px auto 40px auto
+		background url("../images/demo/form-frame.png") no-repeat center
+		padding-top 92px
+		.title
+			font-size 36px
+			text-align center
+			color #fbf3ea
+			font-family: "HirmosCapsUcs"
+			margin-bottom 30px
+		form
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content center
+			flex-wrap wrap
+			max-width 70%
+			margin 0 auto
+			.form-field
+				margin-bottom 32px
+				input
+					border 0
+					outline none
+					width 213px
+					height 50px
+					text-align center
+					font-size 17.74px
+					background url("../images/ui/input.png") no-repeat
+					padding 0 10px
+					color 21190d
+					&:first-child
+						margin-right 14px						
+			input[type="submit"]
+				width 225px
+				height 52px
+				background url("../images/ui/submit-bg.png") no-repeat
+				font-size 18px
+				color #fff
+				font-family: "HirmosCapsUcs"
+				border 0
+				line-height 55px
+				outline none
+				cursor pointer
+				&:hover
+					text-decoration underline
+.breadcrumbs
+	position relative
+	top -40px
+	padding-left 45px
+	a,
+	span
+		font-size 16.54px
+		color #21190d
+	a
+		text-decoration underline
+		position relative
+		&:after
+			display inline-block
+			content '>'
+			margin 0 10px
+		&:hover
+			text-decoration none
+section.catalog .breadcrumbs + h1,
+section.category-catalog .breadcrumbs + h1
+	top -20px
+section.about-category
+	padding-top 100px
+	position relative
+	background url(../images/ui/form-bg.png) no-repeat -8% bottom, #f9dec7
+	&:after
+		display block
+		content url("../images/ui/seperator.png")
+		position absolute
+		top -30px
+		left 50%
+		transform translateX(-50%)
+	.bottom-data
+		margin-top 50px
+.bottom-data
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	font-size 22px
+	color #341c04
+	max-width 675px
+	margin 0 auto
+	justify-content space-between
+	align-items center
+	a
+		color #341c04
+		display block
+		&:hover
+			text-decoration underline
+	&>div
+		position relative
+	.worktime
+		padding-left 50px
+		&:before
+			width 36px
+			height 47px
+			position absolute
+			display block
+			content ""
+			top 0
+			left 0
+			background url("../images/ui/top-data-icons.png") no-repeat 0px 0px		
+	.mail
+		padding-left 70px
+		&:before
+			width 56px
+			height 37px
+			position absolute
+			display block
+			content ""
+			top 0
+			left 0
+			background url("../images/ui/top-data-icons.png") no-repeat 0px -47px
+	.phones
+		padding-left 70px
+		&:before
+			width 69px
+			height 48px
+			position absolute
+			display block
+			content ""
+			top 8px
+			left 0
+			background url("../images/ui/top-data-icons.png") no-repeat 0px -84px
+footer
+	position relative
+	&:after
+		display block
+		content url("../images/ui/footer-bg.png")
+		position absolute
+		bottom -8px
+		left 0
+		z-index 0
+	.footer-nav
+		width 100%
+		position relative
+		z-index 1
+		height 160px
+		padding-top 18px
+		margin-bottom 5px
+		background url("../images/ui/footer-nav-bg.png") no-repeat center
+		ul
+			padding 0 25px
+			margin 0
+			font-family: "HirmosCapsUcs"
+			line-height 56px
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			justify-content space-between
+			li
+				a
+					font-size 14px
+					color #fff
+					text-transform uppercase
+					&:hover
+						text-decoration underline
+	.copyr
+		position relative
+		top -40px
+		z-index 1
+		font-size 18px
+		color #3a2518
+		text-align center
+section.card
+	position relative
+	border-left 1px solid #d2c3af
+	border-right 1px solid #d2c3af
+	margin-top 75px
+	padding-bottom 100px
+	&:after
+		display block
+		content url("../images/ui/seperator.png")
+		position absolute
+		bottom 0
+		left 50%
+		transform translateX(-50%)
+	&:before
+		display block
+		content: ''
+		width 100%
+		height 74px
+		background url("../images/ui/catalog-border.png") no-repeat
+		position absolute
+		top -74px
+		left 0
+	h1
+		padding-left 40px
+		top -20px
+		position relative
+	.card-wrap
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-wrap wrap
+		margin 30px 0 50px 0
+		padding 0 40px
+		font-weight bolder
+		// &>div
+		// 	max-width 45%
+		.item-img
+			width 316px
+			height 378px
+			margin-right 40px
+			background url("../images/ui/card-item-bg.png") no-repeat center
+			.img
+				mask url("../images/ui/card-item-form.png")
+				-webkit-mask-box-image url("../images/ui/card-item-form.png")
+				margin 15px 20px 0 auto
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				overflow hidden
+				width 280px
+				height 337px
+				justify-content center
+				img
+					max-width inherit
+		.item-data
+			max-width 250px
+			.price
+				color #3a2518
+				font-size 30px
+				margin-bottom 15px
+			.info
+				font-size 16px
+				margin-bottom 15px
+			.leave-order
+				cursor pointer
+				width 213px
+				height 50px
+				text-align center
+				background url("../images/ui/callback_bg.png") no-repeat center / contain
+				line-height 50px
+				font-size 18px
+				color #fff
+				font-family: "HirmosCapsUcs"
+				margin-bottom 30px
+				&:hover
+					text-decoration underline
+			.sale
+				div:first-child
+					font-size 30px
+					color #3a2518
+					margin-bottom 10px
+					b
+						color #b0601e
+				div:not(:first-child)
+					font-size 14px
+					color #3a2518
+	.card-info
+		padding 0 40px				
+section.similar
+	padding 30px 40px 60px 40px
+	margin-bottom 25px
+	border-radius: 0 0 60px 60px
+	background url(../images/ui/form-bg.png) no-repeat -8% bottom, #f9dec7		
