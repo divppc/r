@@ -25,7 +25,6 @@ body
 	min-width 1000px
 	margin 0 auto
 	color #21190d
-	overflow-x hidden
 	background url("../images/ui/bg.png") repeat-y
 	font-family "Cormorant", serif
 .cb-btn
@@ -249,8 +248,7 @@ main
 				margin 0 14.5px 0 auto
 				mask url("../images/ui/sidebar-form.png")
 				-webkit-mask-box-image url("../images/ui/sidebar-form.png")
-				img
-					max-width inherit
+
 				
 			&:after
 				display block
@@ -372,14 +370,11 @@ section.category-catalog
 						display -ms-flex
 						display -o-flex
 						display flex
+						overflow hidden
 						justify-content center
 						margin 12px 18px 0 auto
 						mask url("../images/ui/sidebar-form.png")
 						-webkit-mask-box-image url("../images/ui/sidebar-form.png")
-						img
-							display block
-							max-width inherit
-							margin 0 auto
 				span
 					font-size 17px
 					color #3a2518
@@ -391,6 +386,26 @@ section.category-catalog
 						display block
 						content url("../images/ui/item_seperator.png")
 						margin 10px auto 0 auto
+.content-img
+	position relative
+	margin-bottom 30px
+	.img
+		mask url("../images/ui/content-img-frame.png")
+		-webkit-mask-box-image url("../images/ui/content-img-frame.png")
+		width 714px
+		height 302px
+		overflow hidden
+		img
+			border 8px solid transparent
+	&:after
+		display block
+		content ""
+		width 714px
+		height 370px
+		position absolute
+		top -29px
+		left 0
+		background url("../images/ui/content-img-border.png") no-repeat
 section.category-catalog
 	padding-bottom 70px
 	&:after
@@ -415,6 +430,52 @@ section.about
 		top -105px
 		left 50%
 		transform translateX(-50%)
+		
+.form
+	margin 20px auto 40px auto
+	.title
+		font-size 36px
+		text-align center
+		color #fbf3ea
+		font-family: "HirmosCapsUcs"
+		margin-bottom 30px
+	form
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		flex-wrap wrap
+		max-width 70%
+		margin 0 auto
+		.form-field
+			margin-bottom 32px
+			input
+				border 0
+				outline none
+				width 213px
+				height 50px
+				text-align center
+				font-size 17.74px
+				background url("../images/ui/input.png") no-repeat
+				padding 0 10px
+				color #21190d
+				&:first-child
+					margin-right 14px						
+		input[type="submit"]
+			width 225px
+			height 52px
+			background url("../images/ui/submit-bg.png") no-repeat
+			font-size 18px
+			color #fff
+			font-family: "HirmosCapsUcs"
+			border 0
+			line-height 55px
+			outline none
+			cursor pointer
+			&:hover
+				text-decoration underline
 section.callback,
 section.about-category
 	padding 0 30px 30px 30px
@@ -423,52 +484,8 @@ section.about-category
 	.form
 		width 715px
 		height 306px
-		margin 20px auto 40px auto
 		background url("../images/demo/form-frame.png") no-repeat center
 		padding-top 92px
-		.title
-			font-size 36px
-			text-align center
-			color #fbf3ea
-			font-family: "HirmosCapsUcs"
-			margin-bottom 30px
-		form
-			display -webkit-flex
-			display -moz-flex
-			display -ms-flex
-			display -o-flex
-			display flex
-			justify-content center
-			flex-wrap wrap
-			max-width 70%
-			margin 0 auto
-			.form-field
-				margin-bottom 32px
-				input
-					border 0
-					outline none
-					width 213px
-					height 50px
-					text-align center
-					font-size 17.74px
-					background url("../images/ui/input.png") no-repeat
-					padding 0 10px
-					color 21190d
-					&:first-child
-						margin-right 14px						
-			input[type="submit"]
-				width 225px
-				height 52px
-				background url("../images/ui/submit-bg.png") no-repeat
-				font-size 18px
-				color #fff
-				font-family: "HirmosCapsUcs"
-				border 0
-				line-height 55px
-				outline none
-				cursor pointer
-				&:hover
-					text-decoration underline
 .breadcrumbs
 	position relative
 	top -40px
@@ -652,8 +669,6 @@ section.card
 				width 280px
 				height 337px
 				justify-content center
-				img
-					max-width inherit
 		.item-data
 			max-width 250px
 			.price
@@ -688,8 +703,114 @@ section.card
 					color #3a2518
 	.card-info
 		padding 0 40px				
-section.similar
+section.similar,
+section.txt
 	padding 30px 40px 60px 40px
 	margin-bottom 25px
 	border-radius: 0 0 60px 60px
-	background url(../images/ui/form-bg.png) no-repeat -8% bottom, #f9dec7		
+	background url(../images/ui/form-bg.png) no-repeat -8% bottom, #f9dec7
+.modal-bg
+	width 100%
+	height 100%
+	position fixed
+	top 0
+	left 0
+	background rgba(0,0,0, .9)
+	z-index 5
+	display none
+.modal
+	position fixed
+	top 15%
+	left 50%
+	z-index 7
+	transform translateX(-50%)	
+	display none
+	.modal-container
+		width 715px
+		height 287px
+		background url("../images/ui/thx-bg.png") no-repeat center
+		a.close-btn
+			width 25px
+			height 25px
+			position absolute
+			top -10px
+			right 0
+			cursor pointer
+			background url("../images/ui/close-btn.png") no-repeat
+	&.thx
+		display block
+		.modal-container
+			text-align center
+			padding-top 110px
+			color #fff
+			div
+				font-size 36px
+				font-family: "HirmosCapsUcs"
+				margin-bottom 15px
+			p
+				margin 0
+				font-size 17.5px
+				text-transform uppercase
+			span
+				font-size 16.5px
+	&.cb,
+	&.order,
+	&.master
+		.modal-container
+			padding-top 80px
+section.txt
+	position relative
+	border-left 1px solid #d2c3af
+	border-right 1px solid #d2c3af
+	margin-top 75px
+	padding-bottom 60px
+	padding 0 40px
+	.breadcrumbs
+		padding-left 0
+	&:before
+		display block
+		content: ''
+		width 100%
+		height 74px
+		background url("../images/ui/catalog-border.png") no-repeat
+		position absolute
+		top -74px
+		left 0
+.map
+	margin 30px 0
+.locationб
+.contacts-form .title
+	font-size 30px
+	font-weight bolder
+	margin 10px 0
+	text-align center
+.contacts-form
+	label
+		display block
+		font-size 16px
+	// .form-field
+	// 	display -webkit-flex
+	// 	display -moz-flex
+	// 	display -ms-flex
+	// 	display -o-flex
+	// 	display flex
+	textarea
+		min-height 200px
+		width 100%
+	input
+		margin-bottom 10px
+	input[type="submit"]
+		width 225px
+		height 52px
+		background url("../images/ui/submit-bg.png") no-repeat
+		font-size 18px
+		color #fff
+		font-family: "HirmosCapsUcs"
+		border 0
+		line-height 55px
+		margin 20px auto
+		display block
+		outline none
+		cursor pointer
+		&:hover
+			text-decoration underline

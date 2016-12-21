@@ -2,11 +2,22 @@
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="viewport" content="width=1280")
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
 		link(rel="stylesheet", href="css/style.css")
 		title Русская усадьба
 	body
+		.modal-bg
+		.modal.order
+			.modal-container
+				a(href="#" class="close-btn")
+				.form
+					.title Заявка на товар
+					form
+						.form-field
+							input(type="text" placeholder="Ваше имя" required)
+							input(type="text" placeholder="Ваш телефон" required)
+						input(type="submit" value="Отправить")
 		.wrap
 			header
 				.logo-container
@@ -131,8 +142,9 @@ html(lang="ru")
 			.cb-btn
 				div Обратный звонок
 					span или напишите нам
-
-
+			script(src="js/jquery-1.9.1.min.js")
+			script(src="js/owl.carousel.min.js")
+			script(src="js/main.js")
 
 
 

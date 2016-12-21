@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=1280")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+		link(rel="stylesheet", href="css/style.css")
+		title Русская усадьба
+	body
+		.modal-bg
+		.modal.master
+			.modal-container
+				a(href="#" class="close-btn")
+				.form
+					.title Вызвать замерщика
+					form
+						.form-field
+							input(type="text" placeholder="Ваше имя" required)
+							input(type="text" placeholder="Ваш телефон" required)
+						input(type="submit" value="Отправить")
+		.wrap
+			header
+				.logo-container
+					.logo
+						a(href="/")
+							img(src="images/ui/logo.png", alt="")
+					div производство мебели  из дерева
+				.top-data
+					.worktime
+						div с 9:00 до 21:00
+						div Без выходных
+					.mail
+						a(href="mailto:info@info.ru") info@info.ru
+					.phone
+						a(href="tel:74958054267") +7 495 805 42 67
+						a(href="tel:79661005003") +7 966 100 50 03
+			nav
+				ul
+					li
+						a(href="#") доставка
+					li
+						a(href="#") как заказать
+					li
+						a(href="#") каталог нашей продукции
+					li
+						a(href="#") контакты
+					li
+						a(href="#") гарантия
+			main
+				aside
+					.collection
+						.img-form
+							img(src="http://pipsum.com/500x500", alt="")
+						a(href="#") комплекты мебели
+					.sidebar-menu
+						ul
+							li
+								a(href="#") дизайн-проекты
+							li
+								a(href="#") цветовая гамма
+							li
+								a(href="#") доставка
+							li 
+								a(href="#") акции 
+							li
+								a(href="#" class="call-master") вызов замерщика
+							li
+								a(href="#") акции
+							li
+								a(href="#") вызов замерщика
+				article
+					section.txt
+						.breadcrumbs
+							a(href="#") Главная
+							a(href="#") Комплекты мебели
+							span Кресла
+						h1 Контакты
+						.location Наше местонахождение
+						p.
+							Адрес офиса: г Москва, ул 26-ти Бакинских Комиссаров, дом 4 кор 2
+						.map
+							script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=cSFBz9n0RuHKPZK_hVY1Ea7rVPtdsfa7&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+						.contacts-form
+							.title Напишите нам
+							form
+								label(for="name") Ваше имя
+								input(type="text" id="name" required)
+								label(for="phone") Ваш телефон
+								input(type="text" id="phone" required)
+								label(for="msg") Ваше сообщение
+								textarea(id="msg")
+								input(type="submit" value="Отправить")
+
+						
+						.bottom-data
+							.worktime
+								div с 9:00 до 21:00
+								div Без выходных
+							.mail
+								a(href="mailto:info@info.ru") info@info.ru
+							.phones
+								a(href="tel:74958054267") +7 495 805 42 67
+								a(href="tel:79661005003") +7 966 100 50 03
+			footer
+				.footer-nav
+					ul
+						li
+							a(href="#") доставка 
+						li
+							a(href="#") как заказать 
+						li
+							a(href="#") каталог
+						li
+							a(href="#") контакты
+						li
+							a(href="#") гарантия
+				.copyr © 2016 Русская усадьба
+			.cb-btn
+				div Обратный звонок
+					span или напишите нам
+			script(src="js/jquery-1.9.1.min.js")
+			script(src="js/owl.carousel.min.js")
+			script(src="js/main.js")
+
+
+
+
